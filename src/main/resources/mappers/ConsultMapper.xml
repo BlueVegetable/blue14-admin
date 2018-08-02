@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.blue.dao.ConsultDao">
+
+    <resultMap id="ConsultMap" type="Consult">
+        <id column="id" property="id" />
+        <result column="name" property="name" />
+        <result column="remark" property="remark" />
+        <result column="phoneNumber" property="phoneNumber" />
+    </resultMap>
+
+    <insert id="addConsult" parameterType="Consult">
+        insert into consult (name,remark,phoneNumber) values (#{name},#{remark},#{phoneNumber})
+    </insert>
+
+    <delete id="deleteConsult" parameterType="Integer" >
+        delete from consult where id=#{id}
+    </delete>
+
+    <select id="getAllCount" resultType="Integer" >
+        select count(id) from consult
+    </select>
+
+    <select id="getConsultById" parameterType="Integer" resultType="Consult" >
+        select * from consult where id=#{id}
+    </select>
+
+    <select id="getAllConsult" parameterType="java.util.Map" resultMap="ConsultMap" >
+        select * from consult limit #{start},#{number}
+    </select>
+
+    <select id="getConsultLimited" parameterType="java.util.Map" resultMap="ConsultMap" >
+        select * from consult where 1=1
+        <choose>
+            <when test="id!=null">
+                and id=#{id}
+            </when>
+            <when test="name!=null">
+                and name=#{name}
+            </when>
+            <when test="remark!=null">
+                and remark=#{remark}
+            </when>
+            <when test="phoneNumber!=null" >
+                and phoneNumber=#{phoneNumber}
+            </when>
+            <otherwise>
+                and 1=1
+            </otherwise>
+        </choose>
+        limit #{start},#{number}
+    </select>
+
+    <update id="updateConsult" parameterType="Consult" >
+        update consult set name=#{name}, remark=#{remark},phoneNumber=#{phoneNumber} where id=#{id}
+    </update>
+    
+</mapper>
