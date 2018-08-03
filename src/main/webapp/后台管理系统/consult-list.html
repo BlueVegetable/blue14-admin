@@ -101,7 +101,7 @@
                     var data = obj.data;
                     if(obj.event === 'detail'){
                         layer.msg('ID：'+ data.id + ' 的查看操作');
-                        consult_show('修改咨询条目','consult-show.html?id='data.id,'600','500');
+                        // consult_show('修改咨询条目','consult-show.html?id='data.id,'600','500');
                     } else if(obj.event === 'del'){
                         layer.confirm('真的删除行么', function(index){
                             obj.del();
@@ -109,7 +109,7 @@
                         });
                     } else if(obj.event === 'edit'){
                         layer.alert('编辑行：<br>'+ JSON.stringify(data));
-                        consult_edit('修改咨询条目','consult-edit.html?id='data.id,'600','500');
+                        // consult_edit('修改咨询条目','consult-edit.html?id='data.id,'600','500');
                     }
                 });
 
@@ -178,12 +178,12 @@
             function consult_add(title,url,w,h){
                 x_admin_show(title,url,w,h);
             }
-            function consult_show(title,url,w,h){
-                x_admin_show(title,url,w,h);
-            }
-            function consult_edit(title,url,w,h){
-                x_admin_show(title,url,w,h);
-            }
+            // function consult_show(title,url,w,h){
+            //     x_admin_show(title,url,w,h);
+            // }
+            // function consult_edit(title,url,w,h){
+            //     x_admin_show(title,url,w,h);
+            // }
         </script>
     </body>
 </html>
