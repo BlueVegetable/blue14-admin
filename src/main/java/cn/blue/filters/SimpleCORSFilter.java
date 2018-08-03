@@ -13,14 +13,11 @@ public class SimpleCORSFilter implements Filter {
 
     public void destroy() {
         isCross = false;
-        System.out.println(isCross);
     }
 
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws ServletException, IOException {
         if (isCross) {
-            HttpServletRequest httpServletRequest = (HttpServletRequest) request;
             HttpServletResponse httpServletResponse = (HttpServletResponse) response;
-            System.out.println("拦截请求: " + httpServletRequest.getServletPath());
             httpServletResponse.setHeader("Access-Control-Allow-Origin", "*");
             httpServletResponse.setHeader("Access-Control-Allow-Methods", "POST, GET, OPTIONS, DELETE");
             httpServletResponse.setHeader("Access-Control-Max-Age", "0");
@@ -35,7 +32,6 @@ public class SimpleCORSFilter implements Filter {
     public void init(FilterConfig config) {
         String isCrossStr = config.getInitParameter("IsCross");
         isCross = isCrossStr.equals("true") ? true : false;
-        System.out.println(isCrossStr);
     }
 
 }
