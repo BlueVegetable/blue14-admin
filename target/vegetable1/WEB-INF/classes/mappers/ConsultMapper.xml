@@ -31,24 +31,35 @@
 
     <select id="getConsultLimited" parameterType="java.util.Map" resultMap="ConsultMap" >
         select * from consult where 1=1
-        <choose>
-            <when test="id!=null">
-                and id=#{id}
-            </when>
-            <when test="name!=null">
-                and name=#{name}
-            </when>
-            <when test="remark!=null">
-                and remark=#{remark}
-            </when>
-            <when test="phoneNumber!=null" >
-                and phoneNumber=#{phoneNumber}
-            </when>
-            <otherwise>
-                and 1=1
-            </otherwise>
-        </choose>
+        <if test="id!=null">
+            and id=#{id}
+        </if>
+        <if test="name!=null">
+            and name like CONCAT(CONCAT('%',#{name},'%'))
+        </if>
+        <if test="remark!=null">
+            and remark like CONCAT(CONCAT('%',#{remark},'%'))
+        </if>
+        <if test="phoneNumber!=null" >
+            and phoneNumber like CONCAT(CONCAT('%',#{phoneNumber},'%'))
+        </if>
         limit #{start},#{number}
+    </select>
+
+    <select id="getLimitedCount" parameterType="java.util.Map" resultType="Integer">
+        SELECT COUNT(id) number FROM consult WHERE 1=1
+        <if test="id!=null">
+            and id=#{id}
+        </if>
+        <if test="name!=null">
+            and name like CONCAT(CONCAT('%',#{name},'%'))
+        </if>
+        <if test="remark!=null">
+            and remark like CONCAT(CONCAT('%',#{remark},'%'))
+        </if>
+        <if test="phoneNumber!=null" >
+            and phoneNumber like CONCAT(CONCAT('%',#{phoneNumber},'%'))
+        </if>
     </select>
 
     <update id="updateConsult" parameterType="Consult" >

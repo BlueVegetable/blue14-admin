@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
+import java.util.regex.Pattern;
 
 @Controller
 @RequestMapping("/Consult")
@@ -52,22 +53,30 @@ public class ConsultController {
         Integer id=null;
         int page=Integer.parseInt(request.getParameter("page"));
         int limit=Integer.parseInt(request.getParameter("limit"));
-        if(request.getParameter("id")!=null)
+        if(request.getParameter("id")!=null&&isInteger(request.getParameter("id")))
             id=Integer.parseInt(request.getParameter("id"));
         String name=request.getParameter("name");
         String remark=request.getParameter("remark");
         String phoneNumber=request.getParameter("phoneNumber");
 
+        if(name!=null&&name.equals(""))
+            name=null;
+        if(remark!=null&&remark.equals(""))
+            remark=null;
+        if(phoneNumber!=null&&phoneNumber.equals(""))
+            phoneNumber=null;
+
         List<Consult> consults=consultService.selectConsults(id,name,remark,phoneNumber,page,limit);
 
         JSONObject json=new JSONObject();
         json.put("code",0);
-        json.put("count",consultService.getAllCount());
+        json.put("count",consultService.limitConsultCount(id,name,remark,phoneNumber));
         json.put("msg","");
         json.put("data",consults);
         response.getWriter().println(json);
     }
 
+    @RequestMapping("/getConsultById")
     public void getConsultById(HttpServletRequest request,HttpServletResponse response) throws IOException {
         int id=Integer.parseInt(request.getParameter("id"));
         response.getWriter().println(JSONObject.fromObject(consultService.getConsultById(id)));
@@ -87,6 +96,11 @@ public class ConsultController {
 
     private void fail(HttpServletResponse response) throws IOException {
         response.getWriter().println(0);
+    }
+
+    private boolean isInteger(String value) {
+        Pattern pattern = Pattern.compile("^[-\\+]?[\\d]+$");
+        return pattern.matcher(value).matches();
     }
 
 }

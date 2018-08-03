@@ -50,6 +50,17 @@ public class ConsultService {
         return consultDao.getConsultLimited(map);
     }
 
+    public int limitConsultCount(Integer consultId,String name,String remark,String phoneNumber) {
+        Map<String,Object>map=new LinkedHashMap<>();
+
+        map.put("id",consultId);
+        map.put("name",name);
+        map.put("remark",remark);
+        map.put("phoneNumber",phoneNumber);
+
+        return consultDao.getLimitedCount(map);
+    }
+
     public boolean updateConsult(Consult consult){
         return consultDao.updateConsult(consult)>0;
     }
