@@ -10,7 +10,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.regex.Pattern;
 
 @Controller
@@ -21,7 +23,7 @@ public class ConsultController {
     private ConsultService consultService;
 
     @RequestMapping("/addConsult")
-    public void addConsult(Consult consult,HttpServletResponse response) throws IOException {
+    public void addConsult(Consult consult, HttpServletResponse response) throws IOException {
         if(consultService.addConsult(consult))
             response.getWriter().println(1);
         else
@@ -58,6 +60,7 @@ public class ConsultController {
         String name=request.getParameter("name");
         String remark=request.getParameter("remark");
         String phoneNumber=request.getParameter("phoneNumber");
+        String createTime=request.getParameter("createTime");
 
         if(name!=null&&name.equals(""))
             name=null;
@@ -65,8 +68,21 @@ public class ConsultController {
             remark=null;
         if(phoneNumber!=null&&phoneNumber.equals(""))
             phoneNumber=null;
+        if(createTime!=null&&createTime.equals(""))
+            createTime=null;
 
-        List<Consult> consults=consultService.selectConsults(id,name,remark,phoneNumber,page,limit);
+        int start=(page-1)*limit;
+        Map<String,Object>map=new LinkedHashMap<>();
+
+        map.put("id",id);
+        map.put("name",name);
+        map.put("remark",remark);
+        map.put("phoneNumber",phoneNumber);
+        map.put("start",start);
+        map.put("number",limit);
+        map.put("createTime",createTime);
+
+        List<Consult> consults=consultService.selectConsults(map);
 
         JSONObject json=new JSONObject();
         json.put("code",0);

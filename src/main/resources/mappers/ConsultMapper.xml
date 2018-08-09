@@ -4,13 +4,15 @@
 
     <resultMap id="ConsultMap" type="Consult">
         <id column="id" property="id" />
+        <result column="state" property="state" />
+        <result column="createTime" property="createTime" />
         <result column="name" property="name" />
         <result column="remark" property="remark" />
         <result column="phoneNumber" property="phoneNumber" />
     </resultMap>
 
     <insert id="addConsult" parameterType="Consult">
-        insert into consult (name,remark,phoneNumber) values (#{name},#{remark},#{phoneNumber})
+        insert into consult (name,remark,phoneNumber,state,createTime) values (#{name},#{remark},#{phoneNumber},#{state},#{createTime})
     </insert>
 
     <delete id="deleteConsult" parameterType="Integer" >
@@ -43,6 +45,9 @@
         <if test="phoneNumber!=null" >
             and phoneNumber like CONCAT(CONCAT('%',#{phoneNumber},'%'))
         </if>
+        <if test="createTime!=null" >
+            and createTime &gt;= CONCAT(#{createTime},' 00:00:00') AND createTime &lt;= CONCAT(#{createTime},' 23:59:59')
+        </if>
         limit #{start},#{number}
     </select>
 
@@ -59,6 +64,9 @@
         </if>
         <if test="phoneNumber!=null" >
             and phoneNumber like CONCAT(CONCAT('%',#{phoneNumber},'%'))
+        </if>
+        <if test="createTime!=null" >
+            and createTime &gt;= CONCAT(#{createTime},' 00:00:00') AND createTime &lt;= CONCAT(#{createTime},' 23:59:59')
         </if>
     </select>
 

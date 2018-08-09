@@ -36,17 +36,12 @@
             <div class="layui-form-item" style="text-align: center">
                 <div class="layui-inline">
                     <div class="layui-input-inline">
-                        <input type="text" placeholder="通过id查找" name="id" id="idReload" class="layui-input"  autocomplete="off">
+                        <input type="text" name="name" placeholder="通过咨询者名字查找" id="nameReload" class="layui-input"  autocomplete="off">
                     </div>
                 </div>
                 <div class="layui-inline">
                     <div class="layui-input-inline">
-                        <input type="text" name="name" placeholder="通过咨询者查找" id="nameReload" class="layui-input"  autocomplete="off">
-                    </div>
-                </div>
-                <div class="layui-inline">
-                    <div class="layui-input-inline">
-                        <input type="text" name="remark" placeholder="通过备注查找" id="remarkReload" class="layui-input"  autocomplete="off">
+                        <input type="text" name="createTime" placeholder="通过时间查找" id="createTimeReload" class="layui-input"  autocomplete="off">
                     </div>
                 </div>
                 <div class="layui-inline">
@@ -81,6 +76,11 @@
                 var table = layui.table;
                 var form = layui.form;
                 var layer = layui.layer;
+                var date = layui.laydate;
+
+                date.render({
+                    elem:'#createTimeReload'
+                });
 
                 table.render({
                     elem: '#consult-list'
@@ -92,9 +92,10 @@
                         ,{field:'name', width:150, title: '咨询者名字',align:"center"}
                         ,{field:'remark', title: '咨询内容'}
                         ,{field:'phoneNumber', width:150, title: '手机号码'}
-                        ,{fixed: 'right', width:178, align:'center', toolbar: '#bar',title:'操作'}
+                        ,{width:178, align:'center', toolbar: '#bar',title:'操作'}
                     ]]
                     ,limits:['10']
+                    ,height:350
                 });
 
                 table.on('checkbox(demo)', function(obj){
@@ -162,10 +163,9 @@
 
                 var $ = layui.$, active = {
                     reload: function(){
-                        var idReload = $('#idReload');
                         var nameReload=$('#nameReload');
                         var phoneNumber=$('#phoneNumberReload');
-                        var remarkReload=$('#remarkReload');
+                        var createTimeReload=$('#createTimeReload');
 
                         //执行重载
                         table.reload('consult-list', {
@@ -174,10 +174,9 @@
                                 curr: 1 //重新从第 1 页开始
                             }
                             ,where: {
-                                id: idReload.val(),
                                 name:nameReload.val(),
                                 phoneNumber:phoneNumber.val(),
-                                remark:remarkReload.val()
+                                createTime:createTimeReload.val()
                             }
                         });
                     }

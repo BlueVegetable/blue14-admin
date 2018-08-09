@@ -36,17 +36,7 @@ public class ConsultService {
         return consultDao.getAllConsult(start,number);
     }
 
-    public List<Consult> selectConsults(Integer consultId,String name,String remark,String phoneNumber,int page,int number) {
-        int start=(page-1)*number;
-        Map<String,Object>map=new LinkedHashMap<>();
-
-        map.put("id",consultId);
-        map.put("name",name);
-        map.put("remark",remark);
-        map.put("phoneNumber",phoneNumber);
-        map.put("start",start);
-        map.put("number",number);
-
+    public List<Consult> selectConsults(Map map) {
         return consultDao.getConsultLimited(map);
     }
 
