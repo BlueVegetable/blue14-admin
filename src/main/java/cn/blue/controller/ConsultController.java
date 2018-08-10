@@ -127,6 +127,14 @@ public class ConsultController {
             fail(response);
     }
 
+    @RequestMapping("/alterState")
+    public void alterState(int id,int state,HttpServletResponse response) throws IOException {
+        if(consultService.alterState(id,state))
+            success(response);
+        else
+            fail(response);
+    }
+
     private void success(HttpServletResponse response) throws IOException {
         response.getWriter().println(1);
     }

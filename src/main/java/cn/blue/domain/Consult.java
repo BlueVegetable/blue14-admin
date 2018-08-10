@@ -115,4 +115,17 @@ public class Consult {
         result = 31 * result + (attribution != null ? attribution.hashCode() : 0);
         return result;
     }
+
+    @Override
+    public String toString() {
+        return "Consult{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", remark='" + remark + '\'' +
+                ", phoneNumber='" + phoneNumber + '\'' +
+                ", state=" + state +
+                ", createTime=" + createTime +
+                ", attribution='" + attribution + '\'' +
+                '}';
+    }
 }

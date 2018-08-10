@@ -55,4 +55,6 @@ public class ConsultService {
         return consultDao.updateConsult(consult)>0;
     }
 
+    public boolean alterState(int id,int state) { return consultDao.alterState(id,state)>0; }
+
 }

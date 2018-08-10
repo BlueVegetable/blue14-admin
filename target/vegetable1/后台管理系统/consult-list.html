@@ -61,6 +61,7 @@
             <table class="layui-hide" id="consult-list" lay-filter="demo"></table>
         </div>
         <script src="./layui/layui.js" charset="utf-8"></script>
+        <script src="./js/x-layui.js" charset="utf-8"></script>
         <script>
             function consult_edit(title,url,w,h){
                 x_admin_show(title,url,w,h);
@@ -70,7 +71,11 @@
             <!--<a class="layui-btn layui-btn-primary layui-btn-xs" lay-event="detail">查看</a>-->
             <!--<button class="layui-btn layui-btn-xs" lay-event="edit" >编辑</button>-->
             <!--<button class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</button>-->
+            {{# if(d.state == 0){}}
             <button class="layui-btn layui-btn-danger layui-btn-xs" lay-event="confirm">确认处理</button>
+            {{# } else { }}
+            <button class="layui-btn layui-btn-xs layui-btn-disabled" >已处理</button>
+            {{# } }}
         </script>
         <script>
             layui.use(['element','layer','table','form', 'layedit', 'laydate'], function(){
@@ -88,8 +93,7 @@
                     ,url:remoteURL+"/Consult/getConsults.do"
                     ,page:true
                     ,cols: [[
-                        {type:'checkbox',fixed:'center'}
-                        ,{field:'id', width:100, title: '咨询单ID',align:"center", sort: true}
+                        {field:'id', width:100, title: '咨询单ID',align:"center", sort: true}
                         ,{field:'name', width:150, title: '咨询者名字',align:"center"}
                         ,{field:'remark', title: '咨询内容'}
                         ,{field:'state', title: '状态', templet:function (data) {
@@ -146,6 +150,10 @@
                     } else if(obj.event === 'edit'){
                         // layer.alert('编辑行：<br>'+ JSON.stringify(data));
                         consult_edit('添加咨询条目','consult-edit.html?id='+data.id,'600','500');
+                    } else if(obj.event === 'confirm') {
+                        obj.update({
+                            state:'已完成'
+                        });
                     }
                 });
 

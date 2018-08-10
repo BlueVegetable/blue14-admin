@@ -9,6 +9,7 @@
         <result column="name" property="name" />
         <result column="remark" property="remark" />
         <result column="phoneNumber" property="phoneNumber" />
+        <result column="attribution" property="attribution" />
     </resultMap>
 
     <insert id="addConsult" parameterType="Consult">
@@ -71,7 +72,11 @@
     </select>
 
     <update id="updateConsult" parameterType="Consult" >
-        update consult set name=#{name}, remark=#{remark},phoneNumber=#{phoneNumber} where id=#{id}
+        update consult set name=#{name}, remark=#{remark},phoneNumber=#{phoneNumber},attribution=#{attribution} where id=#{id}
+    </update>
+
+    <update id="alterState" parameterType="java.util.Map" >
+        update consult set state=#{state} where id=#{id}
     </update>
     
 </mapper>

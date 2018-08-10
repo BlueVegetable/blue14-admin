@@ -24,4 +24,6 @@ public interface ConsultDao {
 
     int updateConsult(Consult consult);
 
+    int alterState(@Param("id") int id,@Param("state") int state);
+
 }
