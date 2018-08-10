@@ -9,11 +9,12 @@ import java.sql.Timestamp;
 @Entity
 public class Consult {
     private int id;
-    private Integer state;
     private String name;
     private String remark;
     private String phoneNumber;
+    private Integer state;
     private Timestamp createTime;
+    private String attribution;
 
     @Id
     @Column(name = "id")
@@ -75,6 +76,16 @@ public class Consult {
         this.createTime = createTime;
     }
 
+    @Basic
+    @Column(name = "attribution")
+    public String getAttribution() {
+        return attribution;
+    }
+
+    public void setAttribution(String attribution) {
+        this.attribution = attribution;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -88,6 +99,7 @@ public class Consult {
         if (phoneNumber != null ? !phoneNumber.equals(consult.phoneNumber) : consult.phoneNumber != null) return false;
         if (state != null ? !state.equals(consult.state) : consult.state != null) return false;
         if (createTime != null ? !createTime.equals(consult.createTime) : consult.createTime != null) return false;
+        if (attribution != null ? !attribution.equals(consult.attribution) : consult.attribution != null) return false;
 
         return true;
     }
@@ -100,6 +112,7 @@ public class Consult {
         result = 31 * result + (phoneNumber != null ? phoneNumber.hashCode() : 0);
         result = 31 * result + (state != null ? state.hashCode() : 0);
         result = 31 * result + (createTime != null ? createTime.hashCode() : 0);
+        result = 31 * result + (attribution != null ? attribution.hashCode() : 0);
         return result;
     }
 }

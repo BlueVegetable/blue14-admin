@@ -2,6 +2,7 @@ package cn.blue.controller;
 
 import cn.blue.domain.Consult;
 import cn.blue.service.ConsultService;
+import cn.blue.utils.RemoteURL;
 import net.sf.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -10,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.sql.Timestamp;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
@@ -21,9 +23,28 @@ public class ConsultController {
 
     @Autowired
     private ConsultService consultService;
+    /**
+     * 此常量为获取手机号码的归属地必须传递的参数
+     */
+    private static final String PARAMETER="appkey=1d447a09ea953c29d4e9141b49c369d3";
+    private static final String URL="https://way.jd.com/jisuapi/query4";
 
     @RequestMapping("/addConsult")
     public void addConsult(Consult consult, HttpServletResponse response) throws IOException {
+        Map<String,Object> phoneNumberInfo=new RemoteURL().getPhoneNumberInfo(URL,consult.getPhoneNumber(),PARAMETER);
+
+        //设置Consult中的一个字段attribution
+        if(phoneNumberInfo.get("status").equals("202"))
+            consult.setAttribution("");
+        else {
+            Map<String,String> values=(Map)phoneNumberInfo.get("result");
+            consult.setAttribution(values.get("province")+"省"+values.get("city")+"市");
+        }
+
+        //设置consult的状态和创造时间
+        consult.setState(0);
+        consult.setCreateTime(new Timestamp(System.currentTimeMillis()));
+
         if(consultService.addConsult(consult))
             response.getWriter().println(1);
         else

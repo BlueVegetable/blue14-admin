@@ -68,8 +68,9 @@
         </script>
         <script type="text/html" id="bar">
             <!--<a class="layui-btn layui-btn-primary layui-btn-xs" lay-event="detail">查看</a>-->
-            <button class="layui-btn layui-btn-xs" lay-event="edit" >编辑</button>
-            <button class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</button>
+            <!--<button class="layui-btn layui-btn-xs" lay-event="edit" >编辑</button>-->
+            <!--<button class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</button>-->
+            <button class="layui-btn layui-btn-danger layui-btn-xs" lay-event="confirm">确认处理</button>
         </script>
         <script>
             layui.use(['element','layer','table','form', 'layedit', 'laydate'], function(){
@@ -91,11 +92,27 @@
                         ,{field:'id', width:100, title: '咨询单ID',align:"center", sort: true}
                         ,{field:'name', width:150, title: '咨询者名字',align:"center"}
                         ,{field:'remark', title: '咨询内容'}
+                        ,{field:'state', title: '状态', templet:function (data) {
+                                if(data.state==0)
+                                    return "未处理";
+                                else
+                                    return "已处理"
+                            }
+                        }
+                        ,{field:'createTime', title: '创建时间',templet:function (data) {
+                                var createTime=data.createTime;
+                                if(createTime==null)
+                                    return "无数据";
+                                else {
+                                    var date=new Date(createTime.time);
+                                    return date.getFullYear()+"年"+date.getMonth()+"月"+date.getDate()+"日";
+                                }
+                            }
+                        }
                         ,{field:'phoneNumber', width:150, title: '手机号码'}
                         ,{width:178, align:'center', toolbar: '#bar',title:'操作'}
                     ]]
                     ,limits:['10']
-                    ,height:350
                 });
 
                 table.on('checkbox(demo)', function(obj){
