@@ -38,4 +38,8 @@ public class BannerTest {
     public void change(){
         System.out.println(bannerDao.alterVisible(1,false));
     }
+
+    public void test1() {
+        System.out.println(bannerDao.bigger(1));
+    }
 }

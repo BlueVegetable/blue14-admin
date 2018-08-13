@@ -54,4 +54,9 @@ public class Test {
         System.out.println(time2-time1);
     }
 
+
+//    public void test5() {
+//        System.out.println(consultDao.addConsult())
+//    }
+
 }

@@ -11,9 +11,19 @@ public interface BannerDao {
 
     int deleteBanner(int id);
 
-    int getAllCount(@Param("visible") boolean all);
+    int getAllCount(@Param("visible") boolean visible);
 
-    List<Banner> getAllBanners(@Param("visible") boolean all);
+    List<Banner> getAllBanners(@Param("visible") boolean visible);
+
+    int getPositionById(int id);
+
+    int bigger(int imagePosition);
+
+    int smaller(int imagePosition);
+
+    int getMaxBannerPosition();
+
+    String getBannerPath(int imageName);
 
     int alterVisible(@Param("id") int id,@Param("visible") boolean state);
 
