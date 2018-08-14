@@ -51,6 +51,15 @@ public class ConsultService {
         return consultDao.getLimitedCount(map);
     }
 
+    public Map<String,Long> classifyCount(){
+        List<Map<String,Object>> values=consultDao.getAllAttribution();
+        Map<String,Long> all=new LinkedHashMap<>();
+        for(Map<String,Object> value:values) {
+            all.put((String)value.get("attribution"),(Long)value.get("number"));
+        }
+        return all;
+    }
+
     public boolean updateConsult(Consult consult){
         return consultDao.updateConsult(consult)>0;
     }

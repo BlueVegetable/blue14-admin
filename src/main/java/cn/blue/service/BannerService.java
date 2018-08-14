@@ -25,6 +25,10 @@ public class BannerService {
         return bannerDao.getAllBanners(visible);
     }
 
+    public Banner getBanner(int id) {
+        return bannerDao.getBannerById(id);
+    }
+
     public int getCount(boolean visible) {
         return bannerDao.getAllCount(visible);
     }
@@ -40,7 +44,7 @@ public class BannerService {
         return false;
     }
 
-    public boolean changePosition(int id,int position) {
+    private boolean changePosition(int id,int position) {
         return changePosition(id,position);
     }
 

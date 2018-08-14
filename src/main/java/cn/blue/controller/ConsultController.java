@@ -3,6 +3,7 @@ package cn.blue.controller;
 import cn.blue.domain.Consult;
 import cn.blue.service.ConsultService;
 import cn.blue.utils.RemoteURL;
+import cn.blue.utils.Response;
 import net.sf.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -134,6 +135,17 @@ public class ConsultController {
         else
             fail(response);
     }
+
+    /**
+     * 获取得到数量在前n名的地址与数量
+     */
+//    public void getLimitNumberClassfy(int n,HttpServletResponse response) throws IOException {
+//        Map<String,Long> values = consultService.classifyCount();
+//        int count=0;
+//        long temp=-1;
+//        if(n>=values.size())
+//            Response.sendJSONArray(values,response);
+//    }
 
     private void success(HttpServletResponse response) throws IOException {
         response.getWriter().println(1);

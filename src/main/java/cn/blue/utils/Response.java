@@ -22,9 +22,18 @@ public class Response {
         JSONArray jsonArray = JSONArray.fromObject(array);
         write(jsonArray,response);
     }
+    public static void writeString(String value,HttpServletResponse response) throws IOException {
+        write(value,response);
+    }
     private static void write(JSON json,HttpServletResponse response) throws IOException {
         PrintWriter writer=response.getWriter();
         writer.println(json);
+        writer.flush();
+        writer.close();
+    }
+    private static void write(String value,HttpServletResponse response) throws IOException {
+        PrintWriter writer=response.getWriter();
+        writer.println(value);
         writer.flush();
         writer.close();
     }

@@ -15,6 +15,8 @@ public interface BannerDao {
 
     List<Banner> getAllBanners(@Param("visible") boolean visible);
 
+    Banner getBannerById(int id);
+
     int getPositionById(int id);
 
     int bigger(int imagePosition);

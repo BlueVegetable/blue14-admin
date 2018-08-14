@@ -36,6 +36,10 @@
         select position from banner where id=#{id}
     </select>
 
+    <select id="getBannerById" parameterType="Integer" resultType="Banner">
+        select * from banner where id=#{id}
+    </select>
+
     <select id="bigger" resultType="java.lang.Integer" parameterType="java.util.Map">
         SELECT POSITION FROM banner WHERE POSITION &gt; #{imagePosition} LIMIT 1
         <!-- SELECT POSITION FROM image WHERE POSITION &lt; #{imagePosition} ORDER BY POSITION ASC LIMIT 1 -->

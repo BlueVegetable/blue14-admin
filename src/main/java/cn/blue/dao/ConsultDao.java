@@ -20,6 +20,8 @@ public interface ConsultDao {
 
     List<Consult> getConsultLimited(Map<String,Object> parameters);
 
+    List<Map<String,Object>> getAllAttribution();
+
     int getLimitedCount(Map<String,Object> parameters);
 
     int updateConsult(Consult consult);
