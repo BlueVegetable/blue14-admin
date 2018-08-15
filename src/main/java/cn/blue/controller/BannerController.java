@@ -5,7 +5,6 @@ import cn.blue.service.BannerService;
 import cn.blue.utils.FileUpload;
 import cn.blue.utils.Response;
 import net.sf.json.JSONObject;
-import org.apache.lucene.store.Directory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -35,10 +34,15 @@ public class BannerController {
      */
     private static final String DIRECTORY="/banner-image";
 
-    @RequestMapping("/upload")
-    public void upload(MultipartFile file,HttpServletRequest request,HttpServletResponse response) throws IOException {
+    @RequestMapping("/addBanner")
+    public void addBanner(MultipartFile file,HttpServletRequest request,HttpServletResponse response) throws IOException {
         String directory=request.getSession().getServletContext().getRealPath(DIRECTORY);
         String name=FileUpload.copy(file,directory);
+        Banner banner=new Banner();
+        banner.setPath(DIRECTORY+"/"+name);
+        banner.setVisible(true);
+        banner.setType(file.getContentType());
+        bannerService.addBanner(banner);
         JSONObject json=new JSONObject();
         json.put("code",0);
         json.put("msg","");
@@ -48,9 +52,9 @@ public class BannerController {
 
     @RequestMapping("/deleteBanner")
     public void deleteBanner(@RequestParam("id")int id, HttpServletRequest request, HttpServletResponse response) throws IOException {
+        Banner banner=bannerService.getBanner(id);
         if(bannerService.deleteBanner(id)) {
             //如果数据库成功就删除文件
-            Banner banner=bannerService.getBanner(id);
             String pathValue= request.getSession().getServletContext().getRealPath("");
             Path path=Paths.get(pathValue+banner.getPath());
             if(Files.exists(path))

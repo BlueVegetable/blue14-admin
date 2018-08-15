@@ -14,6 +14,7 @@ public class BannerService {
     private BannerDao bannerDao;
 
     public boolean addBanner(Banner banner) {
+        banner.setPosition(getMaxPosition()+1);
         return bannerDao.addBanner(banner)>0;
     }
 
@@ -41,6 +42,8 @@ public class BannerService {
         return bannerDao.smaller(bannerId);
     }
 
+    public int getMaxPosition() { return bannerDao.getMaxBannerPosition(); }
+
     public boolean alterVisible(int id,boolean visible ) {
         return bannerDao.alterVisible(id,visible)>0;
     }
@@ -53,7 +56,7 @@ public class BannerService {
     }
 
     private boolean changePosition(int id,int position) {
-        return changePosition(id,position);
+        return bannerDao.change(id,position)>0;
     }
 
 }

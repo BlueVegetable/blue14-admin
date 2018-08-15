@@ -18,9 +18,9 @@ public class FileUpload {
         Path path=Paths.get(directory);
         if(!Files.exists(path))
             Files.createDirectory(path);
-        String name=System.currentTimeMillis()+file.hashCode()+directory;
-        File fileTo=Paths.get(directory+"/name").toFile();
-        Files.createFile(Paths.get(directory+"/name"));
+        String name=""+System.currentTimeMillis()+""+file.hashCode()+""+directory.hashCode()+""+path.hashCode();
+        File fileTo=Paths.get(directory+"/"+name).toFile();
+        Files.createFile(Paths.get(directory+"/"+name));
         new Thread(new MyThread(fileTo,file)).start();
         return name;
     }

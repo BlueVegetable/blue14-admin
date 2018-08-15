@@ -51,7 +51,7 @@
     </select>
 
     <select id="getMaxBannerPosition" resultType="java.lang.Integer">
-		SELECT MAX(POSITION) MAX FROM banner
+		SELECT MAX(POSITION) value FROM banner
 	</select>
 
     <select id="getBannerPath" resultType="java.lang.String">
