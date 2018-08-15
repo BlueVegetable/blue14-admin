@@ -13,6 +13,7 @@
         <meta name="format-detection" content="telephone=no">
         <link rel="stylesheet" href="./css/x-admin.css" media="all">
         <script src="js/url.js" charset="utf-8" ></script>
+
     </head>
     <body>
         <div class="x-nav">
@@ -24,7 +25,7 @@
             <a class="layui-btn layui-btn-small" style="line-height:1.6em;margin-top:3px;float:right"  href="javascript:location.replace(location.href);" title="刷新"><i class="layui-icon" style="line-height:30px">ဂ</i></a>
         </div>
         <div class="x-body">
-            <xblock><button class="layui-btn" onclick="banner_add('添加轮播图','banner-add.html',600,500)"><i class="layui-icon">&#xe608;</i>添加</button><span class="x-right" style="line-height:40px">共有数据：88 条</span></xblock>
+            <xblock><button class="layui-btn" onclick="banner_add('添加轮播图','banner-add.html',600,500)"><i class="layui-icon">&#xe608;</i>添加</button><span id="number" class="x-right" style="line-height:40px">共有数据：88 条</span></xblock>
             <table class="layui-table">
                 <thead>
                     <tr>
@@ -36,10 +37,10 @@
                         <th>操作</th>
                     </tr>
                 </thead>
-                <tbody id="x-img" id="table-item">
+                <tbody id="x-img">
                     <tr>
                         <td>1</td>
-                        <td><img  src="./images/banner.png" width="200" alt="">点击图片试试</td>
+                        <td><img  src="" width="200" alt="">点击图片试试</td>
                         <td>http://www.xuebingsi.com</td>
                         <td>十月活动轮播</td>
                         <td class="td-status"><span class="layui-btn layui-btn-normal layui-btn-mini">已显示</span></td>
@@ -65,7 +66,7 @@
         <script src="./js/x-layui.js" charset="utf-8"></script>
         <script src="./layui/layui.js" charset="utf-8"></script>
         <script>
-            layui.use(['laydate','element','laypage','layer'], function(){
+            layui.use(['laydate','element','laypage','layer','table'], function(){
                 $ = layui.jquery;//jquery
                 laydate = layui.laydate;//日期插件
                 lement = layui.element;//面包导航
@@ -81,39 +82,44 @@
                         //,shift: 5 //0-6的选择，指定弹出图片动画类型，默认随机
                     });
 
-                    var obj=new Object();
-                    obj.visible="0";
-                    $.post(remoteURL+"/Banner/getBanners.do",obj,function (res) {
-                        var datas=eval("("+res+")");
-                        for(var i=0;i<datas.data.length;i++) {
-                            var data=datas.data[i];
-                            document.getElementById("table-item").innerHTML=
-                                "<tr>\n" +
-                                "                        <td>1</td>\n" +
-                                "                        <td><img  src=\""+remoteURL+data.path+"\" width=\"200\" alt=\"\">点击图片试试</td>\n" +
-                                "                        <td>http://www.xuebingsi.com</td>\n" +
-                                "                        <td>十月活动轮播</td>\n" +
-                                "                        <td class=\"td-status\"><span class=\"layui-btn layui-btn-normal layui-btn-mini\">已显示</span></td>\n" +
-                                "                        <td class=\"td-manage\">\n" +
-                                "                            <a style=\"text-decoration:none\" onclick=\"banner_stop(this,'10001')\" href=\"javascript:;\" title=\"不显示\">\n" +
-                                "                                <i class=\"layui-icon\">&#xe601;</i>\n" +
-                                "                            </a>\n" +
-                                "                            <a title=\"编辑\" href=\"javascript:;\" onclick=\"banner_edit('编辑','banner-edit.html','4','','510')\"\n" +
-                                "                            class=\"ml-5\" style=\"text-decoration:none\">\n" +
-                                "                                <i class=\"layui-icon\">&#xe642;</i>\n" +
-                                "                            </a>\n" +
-                                "                            <a title=\"删除\" href=\"javascript:;\" onclick=\"banner_del(this,'1')\" style=\"text-decoration:none\">\n" +
-                                "                                <i class=\"layui-icon\">&#xe640;</i>\n" +
-                                "                            </a>\n" +
-                                "                        </td>\n" +
-                                "                    </tr>";
-                        }
-                    });
                 });
 
                 laypage.render({
                     elem:'page'
                     ,count:1
+                });
+
+                var obj=new Object();
+                obj.visible="0";
+                $.post(remoteURL+"/Banner/getBanners.do",obj,function (res) {
+                    var datas=eval("("+res+")");
+                    console.log(datas);
+                    var img=document.getElementById("x-img");
+                    document.getElementById("number").innerHTML="共有数据："+datas.number+" 条";
+                    img.innerHTML="";
+                    for(var i=0;i<datas.data.length;i++) {
+                        var data=datas.data[i];
+                        img.innerHTML+=
+                            "<tr>\n" +
+                            "                        <td>"+data.id+"</td>\n" +
+                            "                        <td><img  src=\""+remoteURL+data.path+"\" height=\"100\" alt=\"\">点击图片试试</td>\n" +
+                            "                        <td>http://www.xuebingsi.com</td>\n" +
+                            "                        <td>十月活动轮播</td>\n" +
+                            "                        <td class=\"td-status\"><span class=\"layui-btn layui-btn-normal layui-btn-mini\">已显示</span></td>\n" +
+                            "                        <td class=\"td-manage\">\n" +
+                            "                            <a style=\"text-decoration:none\" onclick=\"banner_stop(this,'10001')\" href=\"javascript:;\" title=\"不显示\">\n" +
+                            "                                <i class=\"layui-icon\">&#xe601;</i>\n" +
+                            "                            </a>\n" +
+                            "                            <a title=\"编辑\" href=\"javascript:;\" onclick=\"banner_edit('编辑','banner-edit.html','4','','510')\"\n" +
+                            "                            class=\"ml-5\" style=\"text-decoration:none\">\n" +
+                            "                                <i class=\"layui-icon\">&#xe642;</i>\n" +
+                            "                            </a>\n" +
+                            "                            <a title=\"删除\" href=\"javascript:;\" onclick=\"banner_del(this,'1')\" style=\"text-decoration:none\">\n" +
+                            "                                <i class=\"layui-icon\">&#xe640;</i>\n" +
+                            "                            </a>\n" +
+                            "                        </td>\n" +
+                            "                    </tr>";
+                    }
                 });
 
             });
@@ -155,15 +161,15 @@
                     layer.msg('已删除!',{icon:1,time:1000});
                 });
             }
-            </script>
-            <script>
-        var _hmt = _hmt || [];
-        (function() {
-          var hm = document.createElement("script");
-          hm.src = "https://hm.baidu.com/hm.js?b393d153aeb26b46e9431fabaf0f6190";
-          var s = document.getElementsByTagName("script")[0]; 
-          s.parentNode.insertBefore(hm, s);
-        })();
+        </script>
+        <script>
+            var _hmt = _hmt || [];
+            (function() {
+                var hm = document.createElement("script");
+                hm.src = "https://hm.baidu.com/hm.js?b393d153aeb26b46e9431fabaf0f6190";
+                var s = document.getElementsByTagName("script")[0];
+                s.parentNode.insertBefore(hm, s);
+            })();
         </script>
     </body>
 </html>

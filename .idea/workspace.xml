@@ -10,19 +10,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3b534090-0289-4eea-92a9-c86c983678d2" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/后台管理系统/banner-list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/后台管理系统/manager.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cn/blue/controller/BannerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/blue/controller/BannerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/blue/controller/ConsultController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/blue/controller/ConsultController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cn/blue/dao/BannerDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/blue/dao/BannerDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/blue/dao/ConsultDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/blue/dao/ConsultDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cn/blue/service/BannerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/blue/service/BannerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/blue/service/ConsultService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/blue/service/ConsultService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/blue/utils/Response.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/blue/utils/Response.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/BannerMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mappers/BannerMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/ConsultMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mappers/ConsultMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/test/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/test/BannerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/BannerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/后台管理系统/banner-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/后台管理系统/banner-list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/blue/controller/BannerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/blue/controller/BannerController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/blue/controller/ConsultController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/blue/controller/ConsultController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/blue/dao/BannerDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/blue/dao/BannerDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/blue/service/BannerService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/blue/service/BannerService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/blue/utils/Response.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/blue/utils/Response.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mappers/BannerMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mappers/BannerMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/BannerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/BannerTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Test.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/vegetable1/WEB-INF/classes/cn/blue/controller/BannerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/vegetable1/WEB-INF/classes/cn/blue/controller/BannerController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/vegetable1/WEB-INF/classes/cn/blue/controller/ConsultController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/vegetable1/WEB-INF/classes/cn/blue/controller/ConsultController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/vegetable1/WEB-INF/classes/cn/blue/dao/BannerDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/vegetable1/WEB-INF/classes/cn/blue/dao/BannerDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/vegetable1/WEB-INF/classes/cn/blue/dao/ConsultDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/vegetable1/WEB-INF/classes/cn/blue/dao/ConsultDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/vegetable1/WEB-INF/classes/cn/blue/service/BannerService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/vegetable1/WEB-INF/classes/cn/blue/service/BannerService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/vegetable1/WEB-INF/classes/cn/blue/service/ConsultService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/vegetable1/WEB-INF/classes/cn/blue/service/ConsultService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/vegetable1/WEB-INF/classes/cn/blue/utils/Response.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/vegetable1/WEB-INF/classes/cn/blue/utils/Response.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/vegetable1/WEB-INF/classes/mappers/BannerMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/vegetable1/WEB-INF/classes/mappers/BannerMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/vegetable1/WEB-INF/classes/mappers/ConsultMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/vegetable1/WEB-INF/classes/mappers/ConsultMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/vegetable1/后台管理系统/banner-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/vegetable1/后台管理系统/banner-list.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -75,26 +87,44 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="BannerController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="BannerController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/cn/blue/controller/BannerController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="31" column="40" lean-forward="true" selection-start-line="31" selection-start-column="40" selection-end-line="31" selection-end-column="40" />
+            <state relative-caret-position="1100">
+              <caret line="99" column="1" selection-start-line="99" selection-start-column="1" selection-end-line="99" selection-end-column="1" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="method#upload#0;class#BannerController#0" />
                 <element signature="method#deleteBanner#0;class#BannerController#0" />
                 <element signature="method#getBanners#0;class#BannerController#0" />
                 <element signature="method#updateState#0;class#BannerController#0" />
+                <element signature="method#upBanner#0;class#BannerController#0" />
+                <element signature="method#downBanner#0;class#BannerController#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FileUpload.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cn/blue/utils/FileUpload.java">
+      <file leaf-file-name="banner-list.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/后台管理系统/banner-list.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="16" column="66" selection-start-line="16" selection-start-column="57" selection-end-line="16" selection-end-column="66" />
+            <state relative-caret-position="120">
+              <caret line="42" column="39" selection-start-line="42" selection-start-column="39" selection-end-line="42" selection-end-column="39" />
+              <folding>
+                <element signature="n#style#0;n#a#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#i#0;n#a#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#xblock#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#td#5;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#1;n#td#5;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#2;n#td#5;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#td#5;n#tr#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#1;n#td#5;n#tr#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#2;n#td#5;n#tr#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -102,42 +132,10 @@
       <file leaf-file-name="BannerService.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/cn/blue/service/BannerService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="39" column="49" selection-start-line="39" selection-start-column="49" selection-end-line="39" selection-end-column="49" />
+            <state relative-caret-position="440">
+              <caret line="40" column="41" selection-start-line="40" selection-start-column="41" selection-end-line="40" selection-end-column="41" />
               <folding>
                 <element signature="method#exchange#0;class#BannerService#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BannerDao.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cn/blue/dao/BannerDao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="356">
-              <caret line="31" column="71" lean-forward="true" selection-start-line="31" selection-start-column="71" selection-end-line="31" selection-end-column="71" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BannerMapper.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/mappers/BannerMapper.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="38" column="74" selection-start-line="38" selection-start-column="74" selection-end-line="38" selection-end-column="74" />
-              <folding>
-                <element signature="n#insert#0;n#mapper#0;n#!!top" />
-                <element signature="n#delete#0;n#mapper#0;n#!!top" />
-                <element signature="n#select#0;n#mapper#0;n#!!top" />
-                <element signature="n#select#1;n#mapper#0;n#!!top" />
-                <element signature="n#select#2;n#mapper#0;n#!!top" />
-                <element signature="n#select#3;n#mapper#0;n#!!top" />
-                <element signature="n#select#3;n#mapper#0;n#!!top" />
-                <element signature="n#select#4;n#mapper#0;n#!!top" />
-                <element signature="n#select#5;n#mapper#0;n#!!top" />
-                <element signature="n#select#6;n#mapper#0;n#!!top" />
-                <element signature="n#update#0;n#mapper#0;n#!!top" />
-                <element signature="n#update#1;n#mapper#0;n#!!top" />
               </folding>
             </state>
           </provider>
@@ -180,22 +178,23 @@
         <option value="$PROJECT_DIR$/src/main/java/cn/blue/service/MessageService.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/blue/controller/MessageController.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/blue/domain/Banner.java" />
-        <option value="$PROJECT_DIR$/src/main/test/BannerTest.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/后台管理系统/index.html" />
         <option value="$PROJECT_DIR$/src/main/test/BannerControllerTest.java" />
         <option value="$PROJECT_DIR$/src/main/resources/spring-mvc.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/后台管理系统/banner-show.html" />
-        <option value="$PROJECT_DIR$/src/main/webapp/后台管理系统/banner-list.html" />
         <option value="$PROJECT_DIR$/src/main/resources/mappers/ConsultMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/cn/blue/dao/ConsultDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/blue/service/ConsultService.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/blue/controller/ConsultController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/blue/utils/Response.java" />
+        <option value="$PROJECT_DIR$/src/main/test/Test.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/blue/controller/TestController.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/blue/dao/BannerDao.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mappers/BannerMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/test/Test.java" />
+        <option value="$PROJECT_DIR$/src/main/test/BannerTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/blue/service/BannerService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/blue/utils/Response.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/blue/controller/BannerController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/后台管理系统/banner-list.html" />
       </list>
     </option>
   </component>
@@ -253,7 +252,7 @@
     </navigator>
     <panes>
       <pane id="AndroidView" />
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -370,11 +369,19 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="vegetable14" type="b2602c69:ProjectViewProjectNode" />
+              <item name="vegetable14" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="后台管理系统" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -383,7 +390,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../vegetable15" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../System" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Libraries" />
@@ -422,14 +429,14 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Android JUnit.Test.test6">
-    <configuration name="BannerTest.change" type="AndroidJUnit" factoryName="Android JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Tomcat Server.tomcat">
+    <configuration name="BannerTest.test1" type="AndroidJUnit" factoryName="Android JUnit" temporary="true" nameIsGenerated="true">
       <module name="vegetable14" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="BannerTest" />
-      <option name="METHOD_NAME" value="change" />
+      <option name="METHOD_NAME" value="test1" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" />
       <option name="PARAMETERS" />
@@ -625,19 +632,19 @@
     </configuration>
     <list>
       <item itemvalue="Tomcat Server.tomcat" />
-      <item itemvalue="Android JUnit.BannerTest.change" />
       <item itemvalue="JUnit.Test.Test2" />
       <item itemvalue="JUnit.Test.test5" />
       <item itemvalue="JUnit.Test.test6" />
       <item itemvalue="Android JUnit.Test.test6" />
+      <item itemvalue="Android JUnit.BannerTest.test1" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Android JUnit.BannerTest.test1" />
         <item itemvalue="Android JUnit.Test.test6" />
         <item itemvalue="JUnit.Test.test5" />
         <item itemvalue="JUnit.Test.test6" />
         <item itemvalue="JUnit.Test.Test2" />
-        <item itemvalue="Android JUnit.BannerTest.change" />
       </list>
     </recent_temporary>
   </component>
@@ -678,32 +685,13 @@
       <workItem from="1534140530084" duration="14807000" />
       <workItem from="1534215245069" duration="5987000" />
       <workItem from="1534230250241" duration="134000" />
-      <workItem from="1534230822943" duration="9868000" />
+      <workItem from="1534230822943" duration="11326000" />
+      <workItem from="1534299493603" duration="5899000" />
+      <workItem from="1534311159345" duration="912000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Test_test5 - 2018.08.14 at 16h 28m 45s.xml">
-      <configuration name="Test.test5" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Test_test5 - 2018.08.14 at 16h 30m 06s.xml">
-      <configuration name="Test.test5" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Test_test5 - 2018.08.14 at 16h 30m 52s.xml">
-      <configuration name="Test.test5" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Test_test5 - 2018.08.14 at 16h 49m 48s.xml">
-      <configuration name="Test.test5" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Test_test5 - 2018.08.14 at 16h 50m 50s.xml">
-      <configuration name="Test.test5" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Test_test6 - 2018.08.14 at 16h 58m 57s.xml">
-      <configuration name="Test.test6" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Test_test6 - 2018.08.14 at 17h 05m 17s.xml">
-      <configuration name="Test.test6" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="Test_test5 - 2018.08.14 at 17h 05m 33s.xml">
       <configuration name="Test.test5" configurationId="JUnit" />
     </history-entry>
@@ -713,9 +701,30 @@
     <history-entry file="Test_test6 - 2018.08.14 at 17h 19m 54s.xml">
       <configuration name="Test.test6" configurationId="AndroidJUnit" />
     </history-entry>
+    <history-entry file="BannerTest_test1 - 2018.08.15 at 11h 15m 23s.xml">
+      <configuration name="BannerTest.test1" configurationId="AndroidJUnit" />
+    </history-entry>
+    <history-entry file="BannerTest_test1 - 2018.08.15 at 11h 15m 47s.xml">
+      <configuration name="BannerTest.test1" configurationId="AndroidJUnit" />
+    </history-entry>
+    <history-entry file="BannerTest_test1 - 2018.08.15 at 11h 16m 10s.xml">
+      <configuration name="BannerTest.test1" configurationId="AndroidJUnit" />
+    </history-entry>
+    <history-entry file="BannerTest_test1 - 2018.08.15 at 11h 16m 25s.xml">
+      <configuration name="BannerTest.test1" configurationId="AndroidJUnit" />
+    </history-entry>
+    <history-entry file="BannerTest_test1 - 2018.08.15 at 11h 16m 51s.xml">
+      <configuration name="BannerTest.test1" configurationId="AndroidJUnit" />
+    </history-entry>
+    <history-entry file="BannerTest_test1 - 2018.08.15 at 11h 17m 04s.xml">
+      <configuration name="BannerTest.test1" configurationId="AndroidJUnit" />
+    </history-entry>
+    <history-entry file="BannerTest_test1 - 2018.08.15 at 11h 17m 23s.xml">
+      <configuration name="BannerTest.test1" configurationId="AndroidJUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="153837000" />
+    <option name="totallyTimeSpent" value="162106000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -740,11 +749,11 @@
       <window_info anchor="bottom" id="Java Enterprise" order="10" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="bottom" id="Version Control" order="12" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49924242" weight="0.26712328" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49924242" visible="true" weight="0.15753424" />
       <window_info anchor="bottom" id="Spring" order="13" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32876712" />
       <window_info id="Persistence" order="7" sideWeight="0.27739727" side_tool="true" weight="0.20833333" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.7226027" visible="true" weight="0.2189394" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.7226027" visible="true" weight="0.22651514" />
       <window_info id="Web" order="6" sideWeight="0.39473686" side_tool="true" weight="0.19318181" />
       <window_info anchor="right" id="Theme Preview" order="7" />
       <window_info id="Favorites" order="5" side_tool="true" />
@@ -766,7 +775,7 @@
       <window_info id="Image Layers" order="3" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49924242" weight="0.26712328" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="right" id="Coverage" order="8" side_tool="true" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Favorites" order="5" side_tool="true" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32876712" />
@@ -782,16 +791,16 @@
       <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="12" />
       <window_info anchor="right" id="Maven Projects" order="9" weight="0.32954547" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3030822" />
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.7226027" visible="true" weight="0.2189394" />
       <window_info anchor="right" id="Database" order="5" weight="0.32954547" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="Web" order="6" sideWeight="0.39473686" side_tool="true" weight="0.19318181" />
       <window_info anchor="right" id="Palette&#9;" order="6" />
       <window_info anchor="right" id="Theme Preview" order="7" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Coverage" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3030822" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3989726" />
     </layout-to-restore>
   </component>
@@ -814,7 +823,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/blue/controller/ConsumerController.java" />
     <entry file="file://$PROJECT_DIR$/src/main/webapp/后台管理系统/admin-list.html" />
     <entry file="file://$PROJECT_DIR$/src/main/webapp/后台管理系统/admin-add.html" />
     <entry file="file://$PROJECT_DIR$/src/main/webapp/后台管理系统/consult-add.html">
@@ -933,13 +941,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/test/BannerControllerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="25" column="1" lean-forward="true" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/applicationContext.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="380">
@@ -958,13 +959,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="4" selection-start-column="4" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/test/BannerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="10" selection-start-line="10" selection-end-line="10" selection-end-column="71" />
         </state>
       </provider>
     </entry>
@@ -990,20 +984,6 @@
             <element signature="n#style#0;n#th#3;n#tr#0;n#thead#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#img#0;n#td#1;n#tr#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#td#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/后台管理系统/banner-list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="61" column="30" selection-start-line="61" selection-start-column="30" selection-end-line="61" selection-end-column="30" />
-          <folding>
-            <element signature="n#style#0;n#a#0;n#td#5;n#tr#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#1;n#td#5;n#tr#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#2;n#td#5;n#tr#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1038,18 +1018,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="740">
           <caret line="144" column="23" lean-forward="true" selection-start-line="144" selection-start-column="23" selection-end-line="144" selection-end-column="23" />
-          <folding>
-            <element signature="method#addConsult#0;class#ConsultController#0" />
-            <element signature="method#deleteConsult#0;class#ConsultController#0" />
-            <element signature="method#getConsults#0;class#ConsultController#0" />
-            <element signature="method#getConsultsLimit#0;class#ConsultController#0" />
-            <element signature="method#getConsultById#0;class#ConsultController#0" />
-            <element signature="method#updateConsult#0;class#ConsultController#0" />
-            <element signature="method#alterState#0;class#ConsultController#0" />
-            <element signature="method#success#0;class#ConsultController#0" />
-            <element signature="method#fail#0;class#ConsultController#0" />
-            <element signature="method#isInteger#0;class#ConsultController#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1057,17 +1025,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="540">
           <caret line="53" selection-start-line="53" selection-end-line="53" />
-          <folding>
-            <element signature="method#limitConsultCount#0;class#ConsultService#0" />
-            <element signature="method#classifyCount#0;class#ConsultService#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/blue/utils/Response.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="24" column="34" selection-start-line="24" selection-start-column="34" selection-end-line="24" selection-end-column="34" />
         </state>
       </provider>
     </entry>
@@ -1078,44 +1035,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mappers/BannerMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="38" column="74" selection-start-line="38" selection-start-column="74" selection-end-line="38" selection-end-column="74" />
-          <folding>
-            <element signature="n#insert#0;n#mapper#0;n#!!top" />
-            <element signature="n#delete#0;n#mapper#0;n#!!top" />
-            <element signature="n#select#0;n#mapper#0;n#!!top" />
-            <element signature="n#select#1;n#mapper#0;n#!!top" />
-            <element signature="n#select#2;n#mapper#0;n#!!top" />
-            <element signature="n#select#3;n#mapper#0;n#!!top" />
-            <element signature="n#select#3;n#mapper#0;n#!!top" />
-            <element signature="n#select#4;n#mapper#0;n#!!top" />
-            <element signature="n#select#5;n#mapper#0;n#!!top" />
-            <element signature="n#select#6;n#mapper#0;n#!!top" />
-            <element signature="n#update#0;n#mapper#0;n#!!top" />
-            <element signature="n#update#1;n#mapper#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/blue/dao/BannerDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="356">
-          <caret line="31" column="71" lean-forward="true" selection-start-line="31" selection-start-column="71" selection-end-line="31" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/blue/service/BannerService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="39" column="49" selection-start-line="39" selection-start-column="49" selection-end-line="39" selection-end-column="49" />
-          <folding>
-            <element signature="method#exchange#0;class#BannerService#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/blue/utils/FileUpload.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
@@ -1123,15 +1042,100 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/blue/controller/TestController.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mappers/BannerMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="319">
+          <caret line="47" column="37" selection-start-line="47" selection-start-column="37" selection-end-line="47" selection-end-column="37" />
+          <folding>
+            <element signature="n#insert#0;n#mapper#0;n#!!top" />
+            <element signature="n#delete#0;n#mapper#0;n#!!top" />
+            <element signature="n#select#0;n#mapper#0;n#!!top" />
+            <element signature="n#select#1;n#mapper#0;n#!!top" />
+            <element signature="n#select#2;n#mapper#0;n#!!top" />
+            <element signature="n#select#3;n#mapper#0;n#!!top" />
+            <element signature="e#1698#1702#0" expanded="true" />
+            <element signature="e#2081#2085#0" expanded="true" />
+            <element signature="n#select#6;n#mapper#0;n#!!top" />
+            <element signature="n#select#7;n#mapper#0;n#!!top" />
+            <element signature="n#update#0;n#mapper#0;n#!!top" />
+            <element signature="n#update#1;n#mapper#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/test/BannerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="18" column="45" selection-start-line="18" selection-start-column="45" selection-end-line="18" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/test/BannerControllerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="25" column="1" lean-forward="true" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/blue/service/BannerService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="40" column="41" selection-start-line="40" selection-start-column="41" selection-end-line="40" selection-end-column="41" />
+          <folding>
+            <element signature="method#exchange#0;class#BannerService#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/blue/dao/BannerDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="21" column="27" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/blue/utils/Response.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="24" column="23" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/blue/controller/BannerController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="31" column="40" lean-forward="true" selection-start-line="31" selection-start-column="40" selection-end-line="31" selection-end-column="40" />
+        <state relative-caret-position="1100">
+          <caret line="99" column="1" selection-start-line="99" selection-start-column="1" selection-end-line="99" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#upload#0;class#BannerController#0" />
             <element signature="method#deleteBanner#0;class#BannerController#0" />
             <element signature="method#getBanners#0;class#BannerController#0" />
             <element signature="method#updateState#0;class#BannerController#0" />
+            <element signature="method#upBanner#0;class#BannerController#0" />
+            <element signature="method#downBanner#0;class#BannerController#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/后台管理系统/banner-list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="42" column="39" selection-start-line="42" selection-start-column="39" selection-end-line="42" selection-end-column="39" />
+          <folding>
+            <element signature="n#style#0;n#a#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#a#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#xblock#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#td#5;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#1;n#td#5;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#2;n#td#5;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#td#5;n#tr#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#1;n#td#5;n#tr#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#2;n#td#5;n#tr#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

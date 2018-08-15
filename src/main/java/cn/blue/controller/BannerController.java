@@ -79,4 +79,22 @@ public class BannerController {
             Response.writeString("0",response);
     }
 
+    @RequestMapping("/upBanner")
+    public void upBanner(@RequestParam("id") int current,HttpServletResponse response) throws IOException {
+        int upId=bannerService.smaller(current);
+        if(bannerService.exchange(current,upId))
+            Response.writeString("1",response);
+        else
+            Response.writeString("0",response);
+    }
+
+    @RequestMapping("/downBanner")
+    public void downBanner(@RequestParam("id")int current,HttpServletResponse response) throws IOException {
+        int downId=bannerService.bigger(current);
+        if(bannerService.exchange(current,downId))
+            Response.writeString("1",response);
+        else
+            Response.writeString("0",response);
+    }
+
 }

@@ -71,8 +71,12 @@
         </if>
     </select>
 
+    <select id="getAllAttribution" resultType="java.util.LinkedHashMap" >
+        SELECT attribution, COUNT(id) number FROM consult GROUP BY attribution ORDER BY number DESC
+    </select>
+
     <update id="updateConsult" parameterType="Consult" >
-        update consult set name=#{name}, remark=#{remark},phoneNumber=#{phoneNumber},attribution=#{attribution} where id=#{id}
+        update consult set name=#{name}, remark=#{remark}, createTime=#{createTime},phoneNumber=#{phoneNumber},attribution=#{attribution} where id=#{id}
     </update>
 
     <update id="alterState" parameterType="java.util.Map" >

@@ -19,9 +19,9 @@ public interface BannerDao {
 
     int getPositionById(int id);
 
-    int bigger(int imagePosition);
+    int bigger(int bannerId);
 
-    int smaller(int imagePosition);
+    int smaller(int bannerId);
 
     int getMaxBannerPosition();
 

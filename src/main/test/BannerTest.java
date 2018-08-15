@@ -15,31 +15,8 @@ public class BannerTest {
     private BannerDao bannerDao;
 
     @Test
-    public void addTest() {
-        Banner banner=new Banner();
-        banner.setPath("柯南");
-        banner.setPosition(100);
-        banner.setType("图片");
-        banner.setVisible(true);
-        System.out.println(bannerDao.addBanner(banner));
-    }
-
-    @Test
-    public void deleteTest() {
-        System.out.println(bannerDao.deleteBanner(1));
-    }
-
-    @Test
-    public void get(){
-        System.out.println(bannerDao.getAllCount(true));
-    }
-
-    @Test
-    public void change(){
-        System.out.println(bannerDao.alterVisible(1,false));
-    }
-
     public void test1() {
-        System.out.println(bannerDao.bigger(1));
+        System.out.println(bannerDao.bigger(4));
     }
+
 }

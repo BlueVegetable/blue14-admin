@@ -40,13 +40,13 @@
         select * from banner where id=#{id}
     </select>
 
-    <select id="bigger" resultType="java.lang.Integer" parameterType="java.util.Map">
-        SELECT POSITION FROM banner WHERE POSITION &gt; #{imagePosition} LIMIT 1
+    <select id="bigger" resultType="Integer" parameterType="Integer">
+        SELECT id FROM banner WHERE POSITION = ( SELECT POSITION FROM banner WHERE POSITION &gt; (SELECT POSITION FROM banner WHERE id=#{bannerId}) ORDER BY POSITION ASC LIMIT 1 )
         <!-- SELECT POSITION FROM image WHERE POSITION &lt; #{imagePosition} ORDER BY POSITION ASC LIMIT 1 -->
     </select>
 
-    <select id="smaller" resultType="java.lang.Integer" parameterType="java.util.Map">
-        SELECT POSITION FROM banner WHERE POSITION &lt; #{imagePosition} ORDER BY POSITION DESC LIMIT 1
+    <select id="smaller" resultType="Integer" parameterType="Integer">
+        SELECT id FROM banner WHERE POSITION = ( SELECT POSITION FROM banner WHERE POSITION &lt;  (SELECT POSITION FROM banner WHERE id=#{bannerId}) ORDER BY POSITION DESC LIMIT 1 )
         <!-- SELECT POSITION FROM image WHERE POSITION &lt; #{imagePosition} LIMIT 1 之前的sql语句-->
     </select>
 

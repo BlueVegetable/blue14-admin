@@ -33,6 +33,14 @@ public class BannerService {
         return bannerDao.getAllCount(visible);
     }
 
+    public int bigger(int bannerId) {
+        return bannerDao.bigger(bannerId);
+    }
+
+    public int smaller(int bannerId) {
+        return bannerDao.smaller(bannerId);
+    }
+
     public boolean alterVisible(int id,boolean visible ) {
         return bannerDao.alterVisible(id,visible)>0;
     }
