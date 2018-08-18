@@ -8,6 +8,7 @@ import net.sf.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -30,7 +31,7 @@ public class ConsultController {
     private static final String PARAMETER="appkey=1d447a09ea953c29d4e9141b49c369d3";
     private static final String URL="https://way.jd.com/jisuapi/query4";
 
-    @RequestMapping("/addConsult")
+    @RequestMapping(value="/addConsult",method = RequestMethod.POST)
     public void addConsult(Consult consult, HttpServletResponse response) throws IOException {
         Map<String,Object> phoneNumberInfo=new RemoteURL().getPhoneNumberInfo(URL,consult.getPhoneNumber(),PARAMETER);
 

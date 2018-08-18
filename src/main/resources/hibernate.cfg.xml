@@ -8,6 +8,7 @@
     <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
       <mapping class="cn.blue.domain.Consult"/>
       <mapping class="cn.blue.domain.Banner"/>
+      <mapping class="cn.blue.domain.Milestone"/>
       <!-- <property name="connection.password"/> -->
 
     <!-- DB schema will be updated if needed -->

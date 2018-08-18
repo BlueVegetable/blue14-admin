@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpServletRequest;
@@ -66,13 +67,14 @@ public class BannerController {
     }
 
     @RequestMapping("/getBanners")
-    public void getBanners(@RequestParam(value="visible") String visible, HttpServletResponse response) throws IOException {
+    @ResponseBody
+    public Map getBanners(@RequestParam(value="visible",required=false) String visible, HttpServletResponse response) throws IOException {
         if(visible==null||!visible.equals("1")) visible="0";
         boolean visity=Integer.parseInt(visible)!=0;
         Map values=new HashMap<String,Object>(2);
         values.put("data",bannerService.getBanner(visity));
         values.put("number",bannerService.getCount(visity));
-        Response.sendJSONObject(values,response);
+        return values;
     }
 
     @RequestMapping("/updateState")
