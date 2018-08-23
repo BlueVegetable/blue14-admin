@@ -7,6 +7,7 @@ import net.sf.json.JSONObject;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.HashMap;
 import java.util.Map;
 
 public class Response {
@@ -36,5 +37,12 @@ public class Response {
         writer.println(value);
         writer.flush();
         writer.close();
+    }
+    public static Map<String,Object> getResponseMap(int code,String msg,Object data) {
+        Map<String,Object> responseMap=new HashMap<>(3);
+        responseMap.put("code",code);
+        responseMap.put("msg",msg);
+        responseMap.put("data",data);
+        return responseMap;
     }
 }

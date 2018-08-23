@@ -6,10 +6,10 @@
   <session-factory>
     <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/blue14</property>
     <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
-      <mapping class="cn.blue.domain.Consult"/>
+    <mapping class="cn.blue.domain.Consult"/>
       <mapping class="cn.blue.domain.Banner"/>
-      <mapping class="cn.blue.domain.Milestone"/>
-      <!-- <property name="connection.password"/> -->
+    <mapping class="cn.blue.domain.Admin"/>
+    <!-- <property name="connection.password"/> -->
 
     <!-- DB schema will be updated if needed -->
     <!-- <property name="hbm2ddl.auto">update</property> -->
